@@ -1,0 +1,55 @@
+Input:
+
+Six servo motors (L_Hip, L_Knee, L_Ankle, R_Hip, R_Knee, R_Ankle)
+Predefined angles for each servo motor
+Timing delays between movements
+
+Output:
+
+Sequential movements of the robot's legs to simulate walking
+
+Initialize Servo Motors:
+
+Assign each servo motor to a variable.
+Define the initial angles for each servo motor.
+
+Start Walking Cycle:
+
+While true (continuous loop):
+
+Phase 1: Lift Left Leg
+
+Move L_Knee to bending angle 
+Move L_Ankle to lifting angle 
+Wait for a short delay.
+Phase 2: Move Left Leg Forward
+
+Move L_Hip to forward angle 
+Wait for a short delay.
+Phase 3: Lower Left Leg
+
+Move L_Knee to straight angle 
+Move L_Ankle to neutral angle 
+Wait for a short delay.
+Phase 4: Push Off with Right Leg
+
+Move R_Knee to bending angle 
+Move R_Ankle to lifting angle 
+Wait for a short delay.
+Phase 5: Move Right Leg Forward
+
+Move R_Hip to forward angle (e.g., 45°).
+Wait for a short delay.
+
+Phase 6: Lower Right Leg
+
+Move R_Knee to straight angle 
+Move R_Ankle to neutral angle 
+Wait for a short delay.
+Optional Phase: Reset Hip Angles
+
+Move L_Hip and R_Hip to neutral angles 
+Wait for a short delay.
+Repeat the Walking Cycle:
+
+Keep repeating Phases 1 through 6 to continue walking.
